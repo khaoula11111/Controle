@@ -1,0 +1,27 @@
+<h1 class="display-4">Ajouter une tache</h1>
+<form #form = "ngForm" autocomplete="off">
+    <br>
+  <div class="form-group">
+      
+    <input name="nom" #nom="ngModel" [(ngModel)]="service.formData.nom" class="form-control" placeholder="nom" required>
+    <div *ngIf="nom.invalid && nom.touched" class="validation-error">This field is required.</div>
+  </div>
+  </div>
+  <br>
+  <div class="form-group">
+    <input name="decription" #nom="ngModel" [(ngModel)]="service.formData.decription" class="form-control" placeholder="description" required>
+    <div *ngIf="decription.invalid && decription.touched" class="validation-error">This field is required.</div>
+    <br>
+    </div>
+    <label>Statut de tache</label>
+    <br>
+    <div class="form-group">
+        
+      <input type="checkbox" name="statut" [(ngModel)]="service.formData.statut"  required>
+    </div>
+    <br>
+  <div class="form-group">
+    <button type="submit" class="btn btn-lg btn-block btn-info">Ajouter</button>
+  </div>
+
+</form>
